@@ -1,10 +1,14 @@
 import plotly.offline as pyo
 import plotly.graph_objs as go
 
+from app.utils.api_utils import apiNBP
+
 def create_sample_graph() -> go.Figure:
-    x = [1, 2, 3, 4, 5]
-    y = [1, 4, 9, 16, 25]
-    
-    fig = go.Figure(data=go.Scatter(x=x, y=y))
+    api = apiNBP()
+
+    data = api.getGBP()
+
+    fig = go.Figure(data=go.Scatter(x=data.exchange_rates, y=data.dates))
+
 
     return fig

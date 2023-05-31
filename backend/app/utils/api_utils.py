@@ -1,6 +1,5 @@
 import requests
-import json
-from data import data
+from app.utils.data import data as Data
 
 class apiNBP:
     def getFormApi(self,currency):
@@ -30,11 +29,12 @@ class apiNBP:
 
         print(dates)
         print(exchange_rates)
-        data=data(dates,exchange_rates)
+        data=Data(dates,exchange_rates)
 
         return data
 
     def getGBP(self):
-        print(self.getFormApi('gbp'))
+        return self.getFormApi('gbp')
     
-    def getUSD(self):
+
+

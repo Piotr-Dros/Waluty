@@ -8,3 +8,4 @@ def getGraphs():
     fig_json = fig.to_json();
 
     return fig_json
+

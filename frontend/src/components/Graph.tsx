@@ -18,7 +18,7 @@ function Graph({ getGraphJson }: Props) {
   if (!graphJson || !graphJson.layout) return <></>;
 
   return (
-    <div className="p-4 shadow-2xl">
+    <div className="p-6 shadow-2xl rounded-lg bg-purple-500">
       <Plot
         data={graphJson.data}
         layout={graphJson.layout}
