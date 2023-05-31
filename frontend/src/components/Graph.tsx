@@ -1,14 +1,31 @@
 import { PlotlyDataLayoutConfig } from 'plotly.js';
+import { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 
 type Props = {
-  graphJson: PlotlyDataLayoutConfig | null;
+  getGraphJson: (...args: any[]) => Promise<PlotlyDataLayoutConfig | null>;
 };
 
-function Graph({ graphJson }: Props) {
+function Graph({ getGraphJson }: Props) {
+  const [graphJson, setGraphJson] = useState<PlotlyDataLayoutConfig | null>(
+    null
+  );
+
+  useEffect(() => {
+    getGraphJson().then((graphJson) => setGraphJson(graphJson));
+  }, [graphJson]);
+
   if (!graphJson || !graphJson.layout) return <></>;
 
-  return <Plot data={graphJson.data} layout={graphJson.layout} />;
+  return (
+    <div className="p-4 shadow-2xl">
+      <Plot
+        data={graphJson.data}
+        layout={graphJson.layout}
+        config={graphJson.config}
+      />
+    </div>
+  );
 }
 
 export default Graph;
