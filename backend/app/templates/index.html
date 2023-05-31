@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Przykładowy wykres</title>
+  </head>
+  <body>
+    <!-- umieszczamy wykres w divie o id "plot" -->
+    <div id="plot">{{ plot_div|safe }}</div>
+
+    <!-- importujemy bibliotekę Plotly i kod JavaScript, który renderuje wykres -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+      // dane wykresu
+      var data = {{ plot_div }};
+
+      // znajdujemy div z id "plot" i tworzymy w nim wykres
+      Plotly.newPlot('plot', data, {});
+    </script>
+  </body>
+</html>
