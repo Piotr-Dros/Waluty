@@ -1,5 +1,5 @@
 class data:
-    def __init__(self,dates,exchange_rates):
+    def __init__(self,dates,values):
         self.dates = dates
-        self.exchange_rates = exchange_rates
+        self.values = values
     
