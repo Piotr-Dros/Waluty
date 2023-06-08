@@ -1,9 +1,9 @@
 from app.api.graphs import bp
-from app.services.graphs import create_sample_graph
+from app.services.graphs import graph1
 
 @bp.get('/')
 def getGraphs():
-    fig = create_sample_graph()
+    fig = graph1()
 
     fig_json = fig.to_json();
 
