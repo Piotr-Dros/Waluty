@@ -1,11 +1,42 @@
 from app.api.graphs import bp
-from app.services.graphs import graph1
+from app.services.graphs import graph1,graph2,graph3,graph4,graph5
 
-@bp.get('/')
-def getGraphs():
+@bp.route('/graph1')
+def index():
     fig = graph1()
-
+    
     fig_json = fig.to_json();
 
     return fig_json
 
+@bp.route('/graph2')
+def index2():
+    fig = graph2()
+    
+    fig_json = fig.to_json();
+
+    return fig_json
+
+@bp.route('/graph3')
+def index3():
+    fig = graph3()
+    
+    fig_json = fig.to_json();
+
+    return fig_json
+
+@bp.route('/graph4')
+def index4():
+    fig = graph4()
+    
+    fig_json = fig.to_json();
+
+    return fig_json
+
+@bp.route('/graph5')
+def index5():
+    fig = graph5()
+    
+    fig_json = fig.to_json();
+
+    return fig_json
