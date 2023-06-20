@@ -2,6 +2,7 @@
 
 import styles from '@/styles/home.module.css';
 import CustomDialog from '@/components/CustomDialog';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -20,23 +21,35 @@ export default function Home() {
         <h2>Wykorzystane technologie:</h2>
         <div className="gap-3 bg-white p-4 rounded-md grid grid-cols-2">
           <CustomDialog
-            className="row-span-2"
+            className="row-span-2 hover:scale-[1.02] transition duration-300"
             backgroundImage="/bsBG.png"
-            title="Beautiful Soup"
-          >
-            Is a tool to scrap a page
-          </CustomDialog>
-          <CustomDialog
             title={
               <div className="grid place-items-center">
-                <div
-                  style={{
-                    backgroundImage: 'url("/plotlyLogo.png")',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                  className="min-h-[100px] w-[400px]"
-                ></div>
+                <Image
+                  src="/bsLogo.jpg"
+                  alt="Beaufiul soup"
+                  width={400}
+                  height={100}
+                />
+              </div>
+            }
+          >
+            Beautiful Soup to popularna biblioteka do analizy i przetwarzania
+            danych HTML i XML w języku Python. Jest wykorzystywana głównie do
+            ekstrakcji informacji ze stron internetowych, skrapowania danych i
+            analizy struktury dokumentów. Oto kilka powodów, dla których warto
+            rozważyć użycie Beautiful Soup w swoim projekcie:
+          </CustomDialog>
+          <CustomDialog
+            className="hover:scale-[1.02] transition duration-300"
+            title={
+              <div className="grid place-items-center">
+                <Image
+                  src="/plotlyLogo.png"
+                  alt="Plotly"
+                  width={400}
+                  height={100}
+                />
               </div>
             }
             backgroundImage="/plotlyBG.png"
@@ -48,7 +61,24 @@ export default function Home() {
             interaktywny sposób.
             <div></div>
           </CustomDialog>
-          <CustomDialog className="" backgroundImage="/nextBG.png" />
+          <CustomDialog
+            className="hover:scale-[1.02] transition duration-300"
+            title={
+              <div className="grid place-items-center">
+                <Image
+                  src="/nextLogo.png"
+                  alt="Next.js"
+                  width={400}
+                  height={100}
+                />
+              </div>
+            }
+            backgroundImage="/nextBG.png"
+          >
+            Next.js to popularny framework do budowania aplikacji webowych
+            opartych na React.js. Oferuje wiele korzyści i rozwiązań, takich jak
+            renderowanie po stronie serwera
+          </CustomDialog>
         </div>
       </article>
     </main>

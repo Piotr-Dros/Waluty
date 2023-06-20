@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} min-h-screen grid grid-cols-main grid-rows-1`}
+        className={`${poppins.className} bg-gray-200 min-h-screen grid grid-cols-main grid-rows-1`}
       >
         <Navigation />
-        <div className="bg-gray-200 grow-[2]">{children}</div>
+        <div className="bg-white grow-[2]">{children}</div>
       </body>
     </html>
   );

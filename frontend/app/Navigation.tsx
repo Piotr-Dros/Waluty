@@ -12,19 +12,15 @@ const navItems: NavItemProps[] = [
   },
   {
     label: 'Analiza Polityczna',
-    url: '/analitics',
+    url: '/analysis',
   },
   {
     label: 'Inflacja',
     url: '/inflation',
   },
   {
-    label: 'Siła nabywcza pieniądza',
-    url: '/money',
-  },
-  {
-    label: 'Ceny mieszkań',
-    url: '/flats',
+    label: 'Siła Nabywcza Pieniądza',
+    url: '/money_power',
   },
 ];
 
