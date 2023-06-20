@@ -1,5 +1,6 @@
 import './globals.css';
 import { Poppins } from 'next/font/google';
+import Navigation from './Navigation';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} overflow-hidden`}>{children}</body>
+      <body
+        className={`${poppins.className} min-h-screen grid grid-cols-main grid-rows-1`}
+      >
+        <Navigation />
+        <div className="py-4 px-10 bg-gray-200 grow-[2]">{children}</div>
+      </body>
     </html>
   );
 }

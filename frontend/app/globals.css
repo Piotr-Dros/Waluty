@@ -4,6 +4,12 @@
 
 @layer base {
   h1 {
-    @apply text-3xl tracking-widest font-extrabold;
+    @apply text-3xl my-6 mb-4 tracking-widest font-extrabold;
+  }
+  h2 {
+    @apply text-2xl my-4 tracking-wide font-medium;
+  }
+  h3 {
+    @apply text-xl my-4;
   }
 }
