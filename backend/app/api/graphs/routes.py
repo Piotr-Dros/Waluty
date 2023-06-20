@@ -12,9 +12,7 @@ def index():
 @bp.route('/2')
 def index2():
     fig = graph2()
-    
     fig_json = fig.to_json();
-
     return fig_json
 
 @bp.route('/3')

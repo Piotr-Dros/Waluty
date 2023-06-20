@@ -1,14 +1,39 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import LoadingGraph from './Loading';
+import LoadingSkeleton from './LoadingSkeleton';
 import { PlotParams } from 'react-plotly.js';
 
 const Plot = dynamic(() => import('react-plotly.js'), {
   ssr: false,
-  loading: () => <LoadingGraph />,
+  loading: () => <LoadingSkeleton />,
 });
 
-export default function CustomPlot({ data, layout, ...rest }: PlotParams) {
-  return <Plot data={data} layout={layout} {...rest} />;
+export default function CustomPlot({
+  data,
+  layout,
+  config,
+  ...rest
+}: PlotParams) {
+  return (
+    <div className="my-4">
+      <Plot
+        className={`w-full rounded-md overflow-hidden ${rest.className}`}
+        data={data}
+        layout={{
+          ...layout,
+          legend: {
+            orientation: 'h',
+          },
+        }}
+        config={{
+          modeBarButtonsToRemove: ['resetScale2d'],
+          displaylogo: false,
+          responsive: true,
+          ...config,
+        }}
+        {...rest}
+      />
+    </div>
+  );
 }

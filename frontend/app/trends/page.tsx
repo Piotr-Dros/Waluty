@@ -41,17 +41,20 @@ export default async function TrendsPage() {
   const data = await getGraph(1);
 
   return (
-    <main>
+    <main className="py-4 px-10">
       <h1 className="text-center">Trendy Walut</h1>
       Poniżej przedstawiam kilka najważniejszych wydarzeń gospodarczych, które
       miały wpływ na kursy walut w ciągu ostatnich 20 lat:
-      <div className="my-3 shadow-md p-2 bg-white rounded-md flex flex-col gap-2">
+      <CustomPlot
+        className="w-full rounded-md overflow-hidden"
+        data={data}
+        layout={{}}
+      />
+      <div className="shadow-md p-4 bg-white rounded-md flex flex-col gap-2">
         {disclosureInfo.map((disclosureInfo) => (
           <CustomDisclosure key={disclosureInfo.label} {...disclosureInfo} />
         ))}
       </div>
-      <h3>Inflacja w krajach (bez Rosji):</h3>
-      <CustomPlot className="w-full" data={data} layout={{}} />
     </main>
   );
 }

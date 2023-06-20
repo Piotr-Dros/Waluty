@@ -75,19 +75,12 @@ def graph3() -> go.Figure:
 
     fig = go.Figure()
    
-
     fig.add_trace(go.Scatter(y=data_pol.values,x=data_pol.dates, name='POL'))
-
     fig.add_trace(go.Scatter(y=data_usa.values,x=data_usa.dates, name='USA'))
-
     fig.add_trace(go.Scatter(y=data_deu.values,x=data_deu.dates, name='GER'))
-
     fig.add_trace(go.Scatter(y=data_gbr.values,x=data_gbr.dates, name='GBR'))
-
     fig.add_trace(go.Scatter(y=data_jpn.values,x=data_jpn.dates, name='JAP'))
-
     fig.add_trace(go.Scatter(y=data_rus.values,x=data_rus.dates, name='RUS'))
-
  
     fig.update_layout(
         xaxis_title='Wartość',
@@ -100,20 +93,14 @@ def graph3() -> go.Figure:
 
 
 def graph4() -> go.Figure:
-    
     data_pol=currency.readinflations('pol')
     data_usa=currency.readinflations('usa')
    
-
     fig = go.Figure()
-   
 
     fig.add_trace(go.Scatter(y=data_pol.values,x=data_pol.dates, name='POL'))
 
     fig.add_trace(go.Scatter(y=data_usa.values,x=data_usa.dates, name='USA'))
-
-
-
  
     fig.update_layout(
         xaxis_title='Wartość',
