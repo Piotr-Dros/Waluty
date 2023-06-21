@@ -476,4 +476,43 @@ def graph23() -> go.Figure:#Słupkowy EUR 2004
 
     return fig
 
+def graph24() -> go.Figure:#pl/usd 2016
+    data=currency.readCurrency2016_18('usd201617')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='2016-2017 500+',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph25() -> go.Figure:#18/19 usd/pol
+    data=currency.readCurrency2016_18('usd201819')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='2018-2019',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+ 
  

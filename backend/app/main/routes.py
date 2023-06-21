@@ -186,3 +186,19 @@ def index23():
     plot_div = fig.to_html(full_html=False)
 
     return render_template('index.html', plot_div=plot_div)
+
+@bp.route('/graph24')
+def index24():
+    fig = graph.graph24()
+    
+    plot_div = fig.to_html(full_html=False)
+
+    return render_template('index.html', plot_div=plot_div)
+
+@bp.route('/graph25')
+def index25():
+    fig = graph.graph25()
+    
+    plot_div = fig.to_html(full_html=False)
+
+    return render_template('index.html', plot_div=plot_div)

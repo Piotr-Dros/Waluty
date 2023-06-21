@@ -87,6 +87,23 @@ def readCurrency2004(filename):
     lists=Data(dates,values)
     return lists
 
+
+def readCurrency2016_18(filename):
+    dates = []
+    values = []
+
+    path=CURRENCIESPATH+'/Currencies2016.2018'+'/{0}.csv'.format(filename)
+
+    with open(path, 'r') as file:
+        reader = csv.reader(file)
+        headers = next(reader)  
+        for row in reader:
+            if len(row) >= 2:  
+                values.append(1/(float(row[0])))
+                dates.append(row[1])
+    lists=Data(dates,values)
+    return lists
+
 def readinflations(filename):
     dates = []
     values = []
