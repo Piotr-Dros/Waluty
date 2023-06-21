@@ -7,6 +7,8 @@ import app.utils.get_data_from_csv as currency
 
 import plotly.graph_objects as go
 
+import plotly.express as px
+
 def graph1() -> go.Figure:
     
 
@@ -127,3 +129,351 @@ def graph5() -> go.Figure:
     )
 
     return fig
+
+def graph6() -> go.Figure:#minimalna pensja
+    
+    data=currency.readCurrency('minimalPension')
+    
+
+    
+    fig = px.pie(values=data.values, names=data.dates)
+
+
+
+ 
+    fig.update_layout(
+        xaxis_title='Wartość',
+        yaxis_title='Kraj',
+        title='Minimalna pensja w krajach',
+    )
+
+    return fig
+
+def graph7() -> go.Figure:#Słupkowy usd 2022
+    data=currency.readCurrency2022('usd')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='USD 2022',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph8() -> go.Figure:#Słupkowy rub 2022
+    data=currency.readCurrency2022('rub')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='RUB 2022',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph9() -> go.Figure:#Słupkowy jpy 2022
+    data=currency.readCurrency2022('jpy')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='JPY 2022',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph10() -> go.Figure:#Słupkowy GBP 2022
+    data=currency.readCurrency2022('gbp')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='GBP 2022',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph11() -> go.Figure:#Słupkowy EUR 2022
+    data=currency.readCurrency2022('eur')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='EUR 2022',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph12() -> go.Figure:#Słupkowy CHF 2022
+    data=currency.readCurrency2022('chf')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='CHF 2022',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+
+def graph13() -> go.Figure:#Słupkowy usd 2014
+    data=currency.readCurrency2014('usd')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='USD 2014-2015',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph14() -> go.Figure:#Słupkowy rub 2014
+    data=currency.readCurrency2014('rub')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='RUB 2014-2015',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph15() -> go.Figure:#Słupkowy jpy 2014
+    data=currency.readCurrency2014('jpy')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='JPY 2014-2015',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph16() -> go.Figure:#Słupkowy GBP 2014
+    data=currency.readCurrency2014('gbp')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='GBP 2014-2015',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph17() -> go.Figure:#Słupkowy EUR 2014
+    data=currency.readCurrency2014('eur')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='EUR 2014-2015',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+ 
+
+
+def graph18() -> go.Figure:#Słupkowy CHF 2004
+    data=currency.readCurrency2004('chf')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='CHF 2004-2007',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+
+def graph19() -> go.Figure:#Słupkowy usd 2004
+    data=currency.readCurrency2004('usd')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='USD 2004-2007',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph20() -> go.Figure:#Słupkowy rub 2004
+    data=currency.readCurrency2014('rub')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='RUB 2004-2007',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph21() -> go.Figure:#Słupkowy jpy 2004
+    data=currency.readCurrency2004('jpy')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='JPY 2004-2007',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph22() -> go.Figure:#Słupkowy GBP 2004
+    data=currency.readCurrency2004('gbp')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='GBP 2004-2007',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+def graph23() -> go.Figure:#Słupkowy EUR 2004
+    data=currency.readCurrency2004('eur')
+    print(data.dates)
+    fig = go.Figure(data=go.Bar(x=data.dates, y=data.values))
+
+
+    fig.update_layout(
+        title='EUR 2004-2007',
+        xaxis_title='Data',
+        yaxis_title='Kurs',
+        xaxis=dict(
+        tickmode='array',
+        tickvals=data.dates,
+        ticktext=data.dates,
+        )
+    )
+
+    return fig
+
+ 

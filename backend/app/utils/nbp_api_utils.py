@@ -11,7 +11,7 @@ class apiNBP:
     
         dates=[]
         exchange_rates=[]
-        for i in range (2002,2010):
+        for i in range (2002,2023):
     
             
             for j in range (1,13):
@@ -67,7 +67,7 @@ class apiNBP:
         print("CHF saved")
 
 
-
-
+#api=apiNBP()
+#api.getFormApiToCsv('gbp')
 
 
