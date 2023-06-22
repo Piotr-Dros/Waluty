@@ -21,23 +21,21 @@ export default function Home() {
         <div className="gap-3 p-4 rounded-md grid grid-cols-2">
           <CustomDialog
             className="row-span-2 hover:scale-[1.02] transition duration-300"
-            backgroundImage="/bsBG.png"
             title={
               <div className="grid place-items-center">
                 <Image
-                  src="/bsLogo.jpg"
-                  alt="Beaufiul soup"
+                  src="/nextLogo.png"
+                  alt="Next.js"
                   width={400}
                   height={100}
                 />
               </div>
             }
+            backgroundImage="/nextBG.png"
           >
-            Beautiful Soup to popularna biblioteka do analizy i przetwarzania
-            danych HTML i XML w języku Python. Jest wykorzystywana głównie do
-            ekstrakcji informacji ze stron internetowych, skrapowania danych i
-            analizy struktury dokumentów. Oto kilka powodów, dla których warto
-            rozważyć użycie Beautiful Soup w swoim projekcie:
+            Next.js to popularny framework do budowania aplikacji webowych
+            opartych na React.js. Oferuje wiele korzyści i rozwiązań, takich jak
+            renderowanie po stronie serwera
           </CustomDialog>
           <CustomDialog
             className="hover:scale-[1.02] transition duration-300"
@@ -60,23 +58,27 @@ export default function Home() {
             interaktywny sposób.
             <div></div>
           </CustomDialog>
+
           <CustomDialog
             className="hover:scale-[1.02] transition duration-300"
+            backgroundImage="/flaskBG.png"
             title={
               <div className="grid place-items-center">
                 <Image
-                  src="/nextLogo.png"
-                  alt="Next.js"
+                  src="/flaskBG.png"
+                  alt="Beaufiul soup"
                   width={400}
                   height={100}
                 />
               </div>
             }
-            backgroundImage="/nextBG.png"
           >
-            Next.js to popularny framework do budowania aplikacji webowych
-            opartych na React.js. Oferuje wiele korzyści i rozwiązań, takich jak
-            renderowanie po stronie serwera
+            Flask to lekki framework aplikacji webowych napisany w języku
+            Python. Jest to popularne narzędzie wykorzystywane do tworzenia
+            dynamicznych stron internetowych, interfejsów API i mikroserwisów.
+            Flask zapewnia podstawowe narzędzia i biblioteki potrzebne do budowy
+            aplikacji webowych, jednocześnie pozostawiając dużą elastyczność i
+            prostotę w użyciu.
           </CustomDialog>
         </div>
       </article>
