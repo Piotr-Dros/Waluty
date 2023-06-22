@@ -49,6 +49,7 @@ export default async function TrendsPage() {
       <CustomSwiper>
         {datas.map((data) => (
           <CustomPlot
+            key={data.data[0].name}
             data={data.data}
             layout={{ ...data.layout }}
             config={data.config}

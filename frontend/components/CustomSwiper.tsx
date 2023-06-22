@@ -9,7 +9,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-export default ({ children }: Props) => {
+export default function CustomSwiper({ children }: Props) {
   return (
     <Splide className="my-4" options={{}}>
       {Children.map(children, (child) => (
@@ -17,4 +17,4 @@ export default ({ children }: Props) => {
       ))}
     </Splide>
   );
-};
+}

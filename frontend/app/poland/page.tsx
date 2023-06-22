@@ -10,6 +10,7 @@ export default async function InlationPage() {
       <div className="p-4 rounded-md flex flex-col gap-2">
         {datas.map((data) => (
           <CustomDisclosure
+            key={data.data[0].name}
             // @ts-ignore
             label={data.layout?.title?.text}
             content={

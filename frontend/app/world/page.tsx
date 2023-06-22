@@ -15,6 +15,7 @@ export default async () => {
         <div className="p-4 rounded-md flex flex-col gap-2">
           {datas.slice(0, 6).map((data) => (
             <CustomDisclosure
+              key={data.data[0].name}
               // @ts-ignore
               label={data.layout?.title?.text}
               content={
@@ -35,6 +36,7 @@ export default async () => {
         <div className="p-4 rounded-md flex flex-col gap-2">
           {datas.slice(6, 11).map((data) => (
             <CustomDisclosure
+              key={data.data[0].name}
               // @ts-ignore
               label={data.layout?.title?.text}
               content={
@@ -55,6 +57,7 @@ export default async () => {
         <div className="p-4 rounded-md flex flex-col gap-2">
           {datas.slice(11).map((data) => (
             <CustomDisclosure
+              key={data.data[0].name}
               // @ts-ignore
               label={data.layout?.title?.text}
               content={
