@@ -2,7 +2,7 @@ import CustomDisclosure from '@/components/CustomDisclosure';
 import CustomPlot from '@/components/CustomPlot';
 import { getMultipleGraphs } from '@/utils/api';
 
-export default async () => {
+export default async function WorldPage() {
   const datas = await getMultipleGraphs([
     7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
   ]);
@@ -75,4 +75,4 @@ export default async () => {
       </section>
     </main>
   );
-};
+}
