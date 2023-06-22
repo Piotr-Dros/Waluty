@@ -1,9 +1,9 @@
 import csv
 from app.utils.data import data as Data
 #from data import data as Data
-CURRENCIESPATH='/home/lenovo/Python/Wizual/Waluty/Data/currencies'
+CURRENCIESPATH='/home/piotrek/dev/projects/visualisation/Data/currencies'
 #https://data.oecd.org/price/inflation-cpi.htm
-INFLATIONPATH='/home/lenovo/Python/Wizual/Waluty/Data/inflation'
+INFLATIONPATH='/home/piotrek/dev/projects/visualisation/Data/inflation'
 
 def readCurrency(filename):
     dates = []

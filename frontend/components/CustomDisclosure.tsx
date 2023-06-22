@@ -4,8 +4,8 @@ import { Disclosure } from '@headlessui/react';
 import { FaAngleUp } from 'react-icons/fa';
 
 export type CustomDisclosureProps = {
-  label: string;
-  content: string;
+  label: any;
+  content: React.ReactNode;
 };
 
 export default function CustomDisclosure({

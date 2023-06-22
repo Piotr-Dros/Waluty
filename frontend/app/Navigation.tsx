@@ -11,8 +11,12 @@ const navItems: NavItemProps[] = [
     url: '/trends',
   },
   {
-    label: 'Analiza Polityczna',
-    url: '/analysis',
+    label: 'Analiza Polityczna - Świat',
+    url: '/world',
+  },
+  {
+    label: 'Analiza Polityczna - Polska',
+    url: '/poland',
   },
   {
     label: 'Inflacja',
@@ -26,7 +30,7 @@ const navItems: NavItemProps[] = [
 
 export default function Navigation() {
   return (
-    <nav className="px-8 py-4 text-black flex flex-col gap-20 shadow-inner">
+    <nav className="px-8 py-4 text-white flex flex-col gap-20 shadow-inner">
       <div>
         <Image src={'/logo.png'} alt="logo" width={300} height={100} />
       </div>

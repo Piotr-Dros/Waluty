@@ -1,6 +1,5 @@
 'use client';
 
-import styles from '@/styles/home.module.css';
 import CustomDialog from '@/components/CustomDialog';
 import Image from 'next/image';
 
@@ -19,7 +18,7 @@ export default function Home() {
       </article>
       <article>
         <h2>Wykorzystane technologie:</h2>
-        <div className="gap-3 bg-white p-4 rounded-md grid grid-cols-2">
+        <div className="gap-3 p-4 rounded-md grid grid-cols-2">
           <CustomDialog
             className="row-span-2 hover:scale-[1.02] transition duration-300"
             backgroundImage="/bsBG.png"

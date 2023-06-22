@@ -2,7 +2,8 @@ import CustomDisclosure, {
   CustomDisclosureProps,
 } from '@/components/CustomDisclosure';
 import CustomPlot from '@/components/CustomPlot';
-import { getGraph } from '@/utils/api';
+import CustomSwiper from '@/components/CustomSwiper';
+import { getMultipleGraphs } from '@/utils/api';
 
 const disclosureInfo: CustomDisclosureProps[] = [
   {
@@ -38,19 +39,23 @@ const disclosureInfo: CustomDisclosureProps[] = [
 ];
 
 export default async function TrendsPage() {
-  const data = await getGraph(1);
+  const datas = await getMultipleGraphs([1, 2]);
 
   return (
     <main className="py-4 px-10">
       <h1 className="text-center">Trendy Walut</h1>
       Poniżej przedstawiam kilka najważniejszych wydarzeń gospodarczych, które
       miały wpływ na kursy walut w ciągu ostatnich 20 lat:
-      <CustomPlot
-        className="w-full rounded-md overflow-hidden"
-        data={data}
-        layout={{}}
-      />
-      <div className="shadow-md p-4 bg-white rounded-md flex flex-col gap-2">
+      <CustomSwiper>
+        {datas.map((data) => (
+          <CustomPlot
+            data={data.data}
+            layout={{ ...data.layout }}
+            config={data.config}
+          />
+        ))}
+      </CustomSwiper>
+      <div className=" p-4 rounded-md flex flex-col gap-2">
         {disclosureInfo.map((disclosureInfo) => (
           <CustomDisclosure key={disclosureInfo.label} {...disclosureInfo} />
         ))}

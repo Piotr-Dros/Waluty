@@ -15,6 +15,7 @@ export default function CustomPlot({
   config,
   ...rest
 }: PlotParams) {
+  console.log(layout);
   return (
     <div className="my-4">
       <Plot
@@ -22,6 +23,13 @@ export default function CustomPlot({
         data={data}
         layout={{
           ...layout,
+          title: '',
+          xaxis: {
+            title: '',
+          },
+          yaxis: {
+            title: '',
+          },
           legend: {
             orientation: 'h',
           },

@@ -30,7 +30,7 @@ export default function CustomDialog({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        className={`${className} outline-none shadow-lg w-full rounded-md px-4 py-24 text-2xl font-medium text-white`}
+        className={`${className} outline-none shadow-lg w-full rounded-md px-4 py-24 text-2xl font-medium text-black`}
       >
         {label}
       </button>
@@ -64,7 +64,7 @@ export default function CustomDialog({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="min-w-[70vw] transform overflow-hidden rounded-md bg-white p-6 shadow-xl transition-all">
+                <Dialog.Panel className="min-w-[70vw] transform overflow-hidden rounded-md bg-white text-black p-6 shadow-xl transition-all">
                   <Dialog.Title as="h3" className="text-2xl font-bold">
                     {title}
                   </Dialog.Title>
