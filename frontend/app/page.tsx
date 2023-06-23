@@ -1,5 +1,6 @@
 'use client';
 
+import CustomBulletList from '@/components/CustomBulletList';
 import CustomDialog from '@/components/CustomDialog';
 import Image from 'next/image';
 
@@ -33,9 +34,24 @@ export default function Home() {
             }
             backgroundImage="/nextBG.png"
           >
-            Next.js to popularny framework do budowania aplikacji webowych
-            opartych na React.js. Oferuje wiele korzyści i rozwiązań, takich jak
-            renderowanie po stronie serwera
+            Next.js jest popularnym frameworkiem do tworzenia stron
+            internetowych i aplikacji w języku JavaScript. Jest oparty na
+            platformie Node.js i zapewnia wiele funkcji ułatwiających rozwój
+            aplikacji, takich jak:
+            <CustomBulletList>
+              <span>
+                Renderowanie po stronie serwera (SSR) - umożliwia renderowanie
+                treści strony po stronie serwera.
+              </span>
+              <span>
+                Routing - dostarcza prosty i intuicyjny system routingu, który
+                umożliwia tworzenie dynamicznych ścieżek URL.
+              </span>
+              <span>
+                Prerendering - oferuje możliwość statycznego generowania stron
+                (SSG).
+              </span>
+            </CustomBulletList>
           </CustomDialog>
           <CustomDialog
             className="hover:scale-[1.02] transition duration-300"
@@ -56,7 +72,23 @@ export default function Home() {
             intuicyjnemu interfejsowi możesz tworzyć wizualizacje danych, które
             pomogą zrozumieć i przedstawić informacje w atrakcyjny i
             interaktywny sposób.
-            <div></div>
+            <br />
+            Oto kilka głównych zalet biblioteki Plotly:
+            <CustomBulletList>
+              <span>
+                Wizualizacje interaktywne - oferuje bogaty zestaw narzędzi do
+                tworzenia interaktywnych wizualizacji danych.
+              </span>
+              <span>
+                Wieloplatformowość - obsługuje wiele platform i środowisk
+                programistycznych, takich jak Jupyter Notebook, Python, R,
+                JavaScript i inne.
+              </span>
+              <span>
+                Personalizacja i stylizacja - umożliwia dokładne dostosowanie
+                wyglądu wizualizacji poprzez kontrolę nad parametrami
+              </span>
+            </CustomBulletList>
           </CustomDialog>
 
           <CustomDialog
@@ -79,6 +111,26 @@ export default function Home() {
             Flask zapewnia podstawowe narzędzia i biblioteki potrzebne do budowy
             aplikacji webowych, jednocześnie pozostawiając dużą elastyczność i
             prostotę w użyciu.
+            <br />
+            Oto kilka głównych zalet Flask:
+            <CustomBulletList>
+              <span>
+                Minimalizm - ma niewiele zależności i nie narzuca żadnej
+                konkretnej struktury projektu.
+              </span>
+              <span>
+                Łatwość użycia - prosty w użyciu, zarówno dla początkujących,
+                jak i doświadczonych programistów Pythona.
+              </span>
+              <span>
+                Routing - oferuje elastyczny system routingu, który umożliwia
+                mapowanie URL-i na funkcje obsługujące żądania HTTP.
+              </span>
+              <span>
+                Rozszerzalność - umożliwia integrację z różnymi rozszerzeniami i
+                bibliotekami.
+              </span>
+            </CustomBulletList>
           </CustomDialog>
         </div>
       </article>

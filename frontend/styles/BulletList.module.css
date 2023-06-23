@@ -1,0 +1,16 @@
+ul.container {
+  margin-block: 10px;
+}
+li.child {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+li.child::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  left: -17px;
+}

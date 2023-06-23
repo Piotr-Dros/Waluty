@@ -32,7 +32,13 @@ export default function Navigation() {
   return (
     <nav className="px-8 py-4 text-white flex flex-col gap-20 shadow-inner">
       <div>
-        <Image src={'/logo.png'} alt="logo" width={300} height={100} />
+        <Image
+          src={'/logo.png'}
+          className="filter invert"
+          alt="logo"
+          width={300}
+          height={100}
+        />
       </div>
       <div>
         <ul className="list-none flex flex-col gap-2">
